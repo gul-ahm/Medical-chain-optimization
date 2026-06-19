@@ -1,0 +1,35 @@
+{
+  "clinical_taxonomy": {
+    "drug_classes": {
+      "Antibiotics": "Anti-infective agents used for bacterial treatment.",
+      "Antidiabetics": "Agents used to manage blood glucose levels.",
+      "Cytotoxics": "Chemotherapy agents for cancer treatment.",
+      "Vaccines": "Biological preparations providing active acquired immunity.",
+      "Analgesics": "Pain relief medication including narcotics."
+    },
+    "dosage_forms": [
+      "Tablet",
+      "Capsule",
+      "Injection",
+      "Suspension",
+      "Cream"
+    ],
+    "administration_routes": [
+      "Oral",
+      "Intravenous (IV)",
+      "Intramuscular (IM)",
+      "Subcutaneous",
+      "Topical"
+    ]
+  },
+  "operational_severity": {
+    "Critical": "Life-saving medicine, 24/7 priority, zero stockout tolerance.",
+    "Essential": "Standard clinical care medicine, high priority.",
+    "Routine": "Maintenance medication, standard logistics priority."
+  },
+  "storage_requirements": {
+    "Room Temp": "15°C to 25°C",
+    "Refrigerated": "2°C to 8°C (Standard Cold Chain)",
+    "Ultra-Cold": "-80°C to -60°C (Vaccine Grade)"
+  }
+}

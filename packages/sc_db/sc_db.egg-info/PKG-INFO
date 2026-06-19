@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: sc_db
+Version: 0.1.0
+Requires-Dist: pydantic>=2.6.1
+Requires-Dist: sqlalchemy>=2.0.27
+Requires-Dist: confluent-kafka>=2.3.0
+Requires-Dist: redis>=5.0.1
+Requires-Dist: PyJWT>=2.8.0
+Requires-Dist: opentelemetry-api>=1.22.0

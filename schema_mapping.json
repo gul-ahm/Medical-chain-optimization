@@ -1,0 +1,40 @@
+{
+  "source": "Northwind OData/JSON",
+  "target": "Medical Supply Intelligence Platform (MSIP)",
+  "mappings": [
+    {
+      "source_entity": "Products",
+      "target_entity": "Medicines",
+      "attribute_map": {
+        "ProductName": "generic_name",
+        "UnitPrice": "unit_price",
+        "UnitsInStock": "total_available_quantity",
+        "ReorderLevel": "safety_stock_level"
+      }
+    },
+    {
+      "source_entity": "Customers",
+      "target_entity": "Hospitals & Pharmacies",
+      "attribute_map": {
+        "CompanyName": "clinical_entity_name",
+        "ContactName": "medical_director_lead",
+        "City": "operational_city"
+      }
+    },
+    {
+      "source_entity": "Suppliers",
+      "target_entity": "Pharma Vendors",
+      "attribute_map": {
+        "CompanyName": "vendor_name",
+        "ContactTitle": "regulatory_contact_role"
+      }
+    },
+    {
+      "source_entity": "Shippers",
+      "target_entity": "Medical Logistics Providers",
+      "attribute_map": {
+        "CompanyName": "logistics_partner_name"
+      }
+    }
+  ]
+}

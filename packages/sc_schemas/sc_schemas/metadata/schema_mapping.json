@@ -1,0 +1,422 @@
+{
+  "fields": {
+    "product_id": [
+      "ProductID",
+      "product_id",
+      "productid"
+    ],
+    "product_name": [
+      "product_name",
+      "ProductName",
+      "productname",
+      "medicine_name",
+      "drug_name",
+      "item_name",
+      "sku_name",
+      "medicine",
+      "pharmaceutical"
+    ],
+    "supplier_id": [
+      "SupplierID",
+      "supplierid",
+      "supplier_id",
+      "vendor_id",
+      "pharma_vendor_id"
+    ],
+    "category_id": [
+      "CategoryID",
+      "categoryid",
+      "category_id"
+    ],
+    "customer_id": [
+      "CustomerID",
+      "customerid",
+      "customer_id",
+      "hospital_id",
+      "clinic_id",
+      "pharmacy_id",
+      "facility_id"
+    ],
+    "order_id": [
+      "OrderID",
+      "order_id",
+      "orderid",
+      "request_id",
+      "supply_request_id",
+      "requisition_id"
+    ],
+    "employee_id": [
+      "employee_id",
+      "employeeid",
+      "EmployeeID"
+    ],
+    "unit_price": [
+      "Price",
+      "unit_price",
+      "unitprice",
+      "UnitPrice"
+    ],
+    "quantity": [
+      "quantity",
+      "UnitsInStock",
+      "Qty",
+      "Quantity"
+    ],
+    "order_date": [
+      "order_date",
+      "orderdate",
+      "OrderDate"
+    ],
+    "ship_country": [
+      "ship_country",
+      "country",
+      "ShipCountry"
+    ],
+    "ship_city": [
+      "ShipCity",
+      "city",
+      "ship_city"
+    ]
+  },
+  "datasets": {
+    "Alphabetical_list_of_products.json": {
+      "classification": "master",
+      "columns": [
+        "ProductID",
+        "ProductName",
+        "SupplierID",
+        "CategoryID",
+        "QuantityPerUnit",
+        "UnitPrice",
+        "UnitsInStock",
+        "UnitsOnOrder",
+        "ReorderLevel",
+        "Discontinued",
+        "CategoryName"
+      ],
+      "pk": []
+    },
+    "Categories.json": {
+      "classification": "reference",
+      "columns": [
+        "CategoryID",
+        "CategoryName",
+        "Description",
+        "Picture"
+      ],
+      "pk": []
+    },
+    "Category_Sales_for_1997.json": {
+      "classification": "reference",
+      "columns": [
+        "CategoryName",
+        "CategorySales"
+      ],
+      "pk": []
+    },
+    "Current_Product_Lists.json": {
+      "classification": "master",
+      "columns": [
+        "ProductID",
+        "ProductName"
+      ],
+      "pk": []
+    },
+    "CustomerDemographics.json": {
+      "classification": "reference",
+      "columns": [],
+      "pk": []
+    },
+    "Customers.json": {
+      "classification": "master",
+      "columns": [
+        "CustomerID",
+        "CompanyName",
+        "ContactName",
+        "ContactTitle",
+        "Address",
+        "City",
+        "Region",
+        "PostalCode",
+        "Country",
+        "Phone",
+        "Fax"
+      ],
+      "pk": []
+    },
+    "Customer_and_Suppliers_by_Cities.json": {
+      "classification": "reference",
+      "columns": [
+        "City",
+        "CompanyName",
+        "ContactName",
+        "Relationship"
+      ],
+      "pk": []
+    },
+    "Employees.json": {
+      "classification": "reference",
+      "columns": [
+        "@odata.etag",
+        "EmployeeID",
+        "LastName",
+        "FirstName",
+        "Title",
+        "TitleOfCourtesy",
+        "BirthDate",
+        "HireDate",
+        "Address",
+        "City",
+        "Region",
+        "PostalCode",
+        "Country",
+        "HomePhone",
+        "Extension",
+        "Photo",
+        "Notes",
+        "ReportsTo",
+        "PhotoPath"
+      ],
+      "pk": []
+    },
+    "Invoices.json": {
+      "classification": "transaction",
+      "columns": [
+        "ShipName",
+        "ShipAddress",
+        "ShipCity",
+        "ShipRegion",
+        "ShipPostalCode",
+        "ShipCountry",
+        "CustomerID",
+        "CustomerName",
+        "Address",
+        "City",
+        "Region",
+        "PostalCode",
+        "Country",
+        "Salesperson",
+        "OrderID",
+        "OrderDate",
+        "RequiredDate",
+        "ShippedDate",
+        "ShipperName",
+        "ProductID",
+        "ProductName",
+        "UnitPrice",
+        "Quantity",
+        "Discount",
+        "ExtendedPrice",
+        "Freight"
+      ],
+      "pk": []
+    },
+    "Orders.json": {
+      "classification": "transaction",
+      "columns": [
+        "@odata.etag",
+        "OrderID",
+        "CustomerID",
+        "EmployeeID",
+        "OrderDate",
+        "RequiredDate",
+        "ShippedDate",
+        "ShipVia",
+        "Freight",
+        "ShipName",
+        "ShipAddress",
+        "ShipCity",
+        "ShipRegion",
+        "ShipPostalCode",
+        "ShipCountry"
+      ],
+      "pk": []
+    },
+    "Orders_Qries.json": {
+      "classification": "transaction",
+      "columns": [
+        "OrderID",
+        "CustomerID",
+        "EmployeeID",
+        "OrderDate",
+        "RequiredDate",
+        "ShippedDate",
+        "ShipVia",
+        "Freight",
+        "ShipName",
+        "ShipAddress",
+        "ShipCity",
+        "ShipRegion",
+        "ShipPostalCode",
+        "ShipCountry",
+        "CompanyName",
+        "Address",
+        "City",
+        "Region",
+        "PostalCode",
+        "Country"
+      ],
+      "pk": []
+    },
+    "Order_Details.json": {
+      "classification": "transaction",
+      "columns": [
+        "OrderID",
+        "ProductID",
+        "UnitPrice",
+        "Quantity",
+        "Discount"
+      ],
+      "pk": []
+    },
+    "Order_Details_Extendeds.json": {
+      "classification": "transaction",
+      "columns": [
+        "OrderID",
+        "ProductID",
+        "ProductName",
+        "UnitPrice",
+        "Quantity",
+        "Discount",
+        "ExtendedPrice"
+      ],
+      "pk": []
+    },
+    "Order_Subtotals.json": {
+      "classification": "transaction",
+      "columns": [
+        "OrderID",
+        "Subtotal"
+      ],
+      "pk": []
+    },
+    "Products.json": {
+      "classification": "master",
+      "columns": [
+        "@odata.etag",
+        "ProductID",
+        "ProductName",
+        "SupplierID",
+        "CategoryID",
+        "QuantityPerUnit",
+        "UnitPrice",
+        "UnitsInStock",
+        "UnitsOnOrder",
+        "ReorderLevel",
+        "Discontinued"
+      ],
+      "pk": []
+    },
+    "Products_Above_Average_Prices.json": {
+      "classification": "reference",
+      "columns": [
+        "ProductName",
+        "UnitPrice"
+      ],
+      "pk": []
+    },
+    "Products_by_Categories.json": {
+      "classification": "reference",
+      "columns": [
+        "CategoryName",
+        "ProductName",
+        "QuantityPerUnit",
+        "UnitsInStock",
+        "Discontinued"
+      ],
+      "pk": []
+    },
+    "Product_Sales_for_1997.json": {
+      "classification": "reference",
+      "columns": [
+        "CategoryName",
+        "ProductName",
+        "ProductSales"
+      ],
+      "pk": []
+    },
+    "Regions.json": {
+      "classification": "reference",
+      "columns": [
+        "RegionID",
+        "RegionDescription"
+      ],
+      "pk": []
+    },
+    "Sales_by_Categories.json": {
+      "classification": "reference",
+      "columns": [
+        "CategoryID",
+        "CategoryName",
+        "ProductName",
+        "ProductSales"
+      ],
+      "pk": []
+    },
+    "Sales_Totals_by_Amounts.json": {
+      "classification": "transaction",
+      "columns": [
+        "SaleAmount",
+        "OrderID",
+        "CompanyName",
+        "ShippedDate"
+      ],
+      "pk": []
+    },
+    "Shippers.json": {
+      "classification": "reference",
+      "columns": [
+        "ShipperID",
+        "CompanyName",
+        "Phone"
+      ],
+      "pk": []
+    },
+    "Summary_of_Sales_by_Quarters.json": {
+      "classification": "transaction",
+      "columns": [
+        "ShippedDate",
+        "OrderID",
+        "Subtotal"
+      ],
+      "pk": []
+    },
+    "Summary_of_Sales_by_Years.json": {
+      "classification": "transaction",
+      "columns": [
+        "ShippedDate",
+        "OrderID",
+        "Subtotal"
+      ],
+      "pk": []
+    },
+    "Suppliers.json": {
+      "classification": "reference",
+      "columns": [
+        "SupplierID",
+        "CompanyName",
+        "ContactName",
+        "ContactTitle",
+        "Address",
+        "City",
+        "Region",
+        "PostalCode",
+        "Country",
+        "Phone",
+        "Fax",
+        "HomePage"
+      ],
+      "pk": []
+    },
+    "Territories.json": {
+      "classification": "reference",
+      "columns": [
+        "@odata.etag",
+        "TerritoryID",
+        "TerritoryDescription",
+        "RegionID"
+      ],
+      "pk": []
+    }
+  }
+}

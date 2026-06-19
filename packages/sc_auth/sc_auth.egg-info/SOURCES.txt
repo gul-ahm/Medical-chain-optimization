@@ -1,0 +1,9 @@
+pyproject.toml
+sc_auth/__init__.py
+sc_auth/dependencies.py
+sc_auth/jwt.py
+sc_auth.egg-info/PKG-INFO
+sc_auth.egg-info/SOURCES.txt
+sc_auth.egg-info/dependency_links.txt
+sc_auth.egg-info/requires.txt
+sc_auth.egg-info/top_level.txt

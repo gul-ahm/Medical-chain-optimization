@@ -1,0 +1,1087 @@
+{
+  "health": {
+    "Next.js Frontend": {
+      "alive": true,
+      "status_code": 200,
+      "health_response": "<!DOCTYPE html><html lang=\"en\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet"
+    },
+    "Inventory Service": {
+      "alive": true,
+      "status_code": 404,
+      "health_response": "{\"detail\":\"Not Found\"}"
+    },
+    "Forecasting Service": {
+      "alive": true,
+      "status_code": 200,
+      "health_response": "{\"status\":\"ok\",\"service\":\"forecasting\"}"
+    },
+    "Optimization Service": {
+      "alive": true,
+      "status_code": 404,
+      "health_response": "{\"detail\":\"Not Found\"}"
+    },
+    "Orchestration Service": {
+      "alive": true,
+      "status_code": 200,
+      "health_response": "{\"status\":\"ok\",\"service\":\"orchestration\"}"
+    },
+    "Governance Service": {
+      "alive": true,
+      "status_code": 404,
+      "health_response": "{\"detail\":\"Not Found\"}"
+    },
+    "AI Orchestration Service": {
+      "alive": true,
+      "status_code": 200,
+      "health_response": "{\"status\":\"ok\",\"ollama\":\"connected\"}"
+    },
+    "Data Ingestion Service": {
+      "alive": true,
+      "status_code": 200,
+      "health_response": "{\"status\":\"ok\",\"service\":\"data-ingestion-service\"}"
+    },
+    "Grafana Stub": {
+      "alive": true,
+      "status_code": 302,
+      "health_response": "<a href=\"/login\">Found</a>.\n\n"
+    },
+    "Prometheus Stub": {
+      "alive": true,
+      "status_code": 302,
+      "health_response": "<a href=\"/graph\">Found</a>.\n\n"
+    }
+  },
+  "api_endpoints": {
+    "Digital Twin Future Simulation": {
+      "status_code": 200,
+      "data": {
+        "data": {
+          "simulation_horizon": "7 Days",
+          "projections": {
+            "Day 1": [
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Influenza Vaccine",
+                "projected_available": 174,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 17.2
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Amoxicillin",
+                "projected_available": 101,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 10.0
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Methotrexate",
+                "projected_available": 153,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 15.1
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Azithromycin",
+                "projected_available": 590,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 58.4
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Ciprofloxacin",
+                "projected_available": 231,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 22.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Cyclophosphamide",
+                "projected_available": 207,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 20.5
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "BCG Vaccine",
+                "projected_available": 104,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 10.3
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Insulin Glargine",
+                "projected_available": 1665,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 110.3
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Insulin Glargine",
+                "projected_available": 1086,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 71.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Insulin Glargine",
+                "projected_available": 1325,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 87.7
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "BCG Vaccine",
+                "projected_available": 119,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 11.8
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "BCG Vaccine",
+                "projected_available": 89,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 8.8
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Metformin",
+                "projected_available": 374,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 37.0
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Influenza Vaccine",
+                "projected_available": 113,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 11.2
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Influenza Vaccine",
+                "projected_available": 28,
+                "projected_expiring": 0,
+                "status": "CRITICAL_SHORTAGE",
+                "survivability_days": 2.8
+              }
+            ],
+            "Day 2": [
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Influenza Vaccine",
+                "projected_available": 164,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 16.2
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Amoxicillin",
+                "projected_available": 91,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 9.0
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Methotrexate",
+                "projected_available": 143,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 14.2
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Azithromycin",
+                "projected_available": 580,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 57.4
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Ciprofloxacin",
+                "projected_available": 221,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 21.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Cyclophosphamide",
+                "projected_available": 197,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 19.5
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "BCG Vaccine",
+                "projected_available": 94,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 9.3
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Insulin Glargine",
+                "projected_available": 1650,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 109.3
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Insulin Glargine",
+                "projected_available": 1071,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 70.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Insulin Glargine",
+                "projected_available": 1310,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 86.8
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "BCG Vaccine",
+                "projected_available": 109,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 10.8
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "BCG Vaccine",
+                "projected_available": 79,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 7.8
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Metformin",
+                "projected_available": 364,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 36.0
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Influenza Vaccine",
+                "projected_available": 103,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 10.2
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Influenza Vaccine",
+                "projected_available": 18,
+                "projected_expiring": 0,
+                "status": "CRITICAL_SHORTAGE",
+                "survivability_days": 1.8
+              }
+            ],
+            "Day 3": [
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Influenza Vaccine",
+                "projected_available": 154,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 15.2
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Amoxicillin",
+                "projected_available": 81,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 8.0
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Methotrexate",
+                "projected_available": 133,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 13.2
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Azithromycin",
+                "projected_available": 570,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 56.4
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Ciprofloxacin",
+                "projected_available": 211,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 20.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Cyclophosphamide",
+                "projected_available": 187,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 18.5
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "BCG Vaccine",
+                "projected_available": 84,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 8.3
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Insulin Glargine",
+                "projected_available": 1635,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 108.3
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Insulin Glargine",
+                "projected_available": 1056,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 69.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Insulin Glargine",
+                "projected_available": 1295,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 85.8
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "BCG Vaccine",
+                "projected_available": 99,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 9.8
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "BCG Vaccine",
+                "projected_available": 69,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 6.8
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Metformin",
+                "projected_available": 354,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 35.0
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Influenza Vaccine",
+                "projected_available": 93,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 9.2
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Influenza Vaccine",
+                "projected_available": 8,
+                "projected_expiring": 0,
+                "status": "CRITICAL_SHORTAGE",
+                "survivability_days": 0.8
+              }
+            ],
+            "Day 4": [
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Influenza Vaccine",
+                "projected_available": 144,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 14.3
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Amoxicillin",
+                "projected_available": 71,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 7.0
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Methotrexate",
+                "projected_available": 123,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 12.2
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Azithromycin",
+                "projected_available": 560,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 55.4
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Ciprofloxacin",
+                "projected_available": 201,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 19.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Cyclophosphamide",
+                "projected_available": 177,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 17.5
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "BCG Vaccine",
+                "projected_available": 74,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 7.3
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Insulin Glargine",
+                "projected_available": 1620,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 107.3
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Insulin Glargine",
+                "projected_available": 1041,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 68.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Insulin Glargine",
+                "projected_available": 1280,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 84.8
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "BCG Vaccine",
+                "projected_available": 89,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 8.8
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "BCG Vaccine",
+                "projected_available": 59,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 5.8
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Metformin",
+                "projected_available": 344,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 34.1
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Influenza Vaccine",
+                "projected_available": 83,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 8.2
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Influenza Vaccine",
+                "projected_available": 0,
+                "projected_expiring": 0,
+                "status": "CRITICAL_SHORTAGE",
+                "survivability_days": 0.0
+              }
+            ],
+            "Day 5": [
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Influenza Vaccine",
+                "projected_available": 134,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 13.3
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Amoxicillin",
+                "projected_available": 61,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 6.0
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Methotrexate",
+                "projected_available": 113,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 11.2
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Azithromycin",
+                "projected_available": 550,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 54.5
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Ciprofloxacin",
+                "projected_available": 191,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 18.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Cyclophosphamide",
+                "projected_available": 167,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 16.5
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "BCG Vaccine",
+                "projected_available": 64,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 6.3
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Insulin Glargine",
+                "projected_available": 1605,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 106.3
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Insulin Glargine",
+                "projected_available": 1026,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 67.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Insulin Glargine",
+                "projected_available": 1265,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 83.8
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "BCG Vaccine",
+                "projected_available": 79,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 7.8
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "BCG Vaccine",
+                "projected_available": 49,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 4.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Metformin",
+                "projected_available": 334,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 33.1
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Influenza Vaccine",
+                "projected_available": 73,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 7.2
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Influenza Vaccine",
+                "projected_available": 0,
+                "projected_expiring": 0,
+                "status": "CRITICAL_SHORTAGE",
+                "survivability_days": 0.0
+              }
+            ],
+            "Day 6": [
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Influenza Vaccine",
+                "projected_available": 124,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 12.3
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Amoxicillin",
+                "projected_available": 51,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 5.0
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Methotrexate",
+                "projected_available": 103,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 10.2
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Azithromycin",
+                "projected_available": 540,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 53.5
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Ciprofloxacin",
+                "projected_available": 181,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 17.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Cyclophosphamide",
+                "projected_available": 157,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 15.5
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "BCG Vaccine",
+                "projected_available": 54,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 5.3
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Insulin Glargine",
+                "projected_available": 1590,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 105.3
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Insulin Glargine",
+                "projected_available": 1011,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 67.0
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Insulin Glargine",
+                "projected_available": 1250,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 82.8
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "BCG Vaccine",
+                "projected_available": 69,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 6.8
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "BCG Vaccine",
+                "projected_available": 39,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 3.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Metformin",
+                "projected_available": 324,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 32.1
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Influenza Vaccine",
+                "projected_available": 63,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 6.2
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Influenza Vaccine",
+                "projected_available": 0,
+                "projected_expiring": 0,
+                "status": "CRITICAL_SHORTAGE",
+                "survivability_days": 0.0
+              }
+            ],
+            "Day 7": [
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Influenza Vaccine",
+                "projected_available": 114,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 11.3
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Amoxicillin",
+                "projected_available": 41,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 4.1
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Methotrexate",
+                "projected_available": 93,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 9.2
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Azithromycin",
+                "projected_available": 530,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 52.5
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Ciprofloxacin",
+                "projected_available": 171,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 16.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Cyclophosphamide",
+                "projected_available": 147,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 14.6
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "BCG Vaccine",
+                "projected_available": 44,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 4.4
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Insulin Glargine",
+                "projected_available": 1575,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 104.3
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Insulin Glargine",
+                "projected_available": 996,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 66.0
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Insulin Glargine",
+                "projected_available": 1235,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 81.8
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "BCG Vaccine",
+                "projected_available": 59,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 5.8
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "BCG Vaccine",
+                "projected_available": 29,
+                "projected_expiring": 0,
+                "status": "CRITICAL_SHORTAGE",
+                "survivability_days": 2.9
+              },
+              {
+                "warehouse_id": "WH-REG-001",
+                "sku": "Metformin",
+                "projected_available": 314,
+                "projected_expiring": 0,
+                "status": "STABLE",
+                "survivability_days": 31.1
+              },
+              {
+                "warehouse_id": "WH-REG-003",
+                "sku": "Influenza Vaccine",
+                "projected_available": 53,
+                "projected_expiring": 0,
+                "status": "WARNING_SHORTAGE",
+                "survivability_days": 5.2
+              },
+              {
+                "warehouse_id": "WH-REG-002",
+                "sku": "Influenza Vaccine",
+                "projected_available": 0,
+                "projected_expiring": 0,
+                "status": "CRITICAL_SHORTAGE",
+                "survivability_days": 0.0
+              }
+            ]
+          },
+          "projected_bottlenecks": [
+            {
+              "day": "Day 1",
+              "warehouse_id": "WH-REG-002",
+              "sku": "Influenza Vaccine",
+              "remedy_suggested": "Initiate proactive transfer of Influenza Vaccine from surplus hubs immediately."
+            },
+            {
+              "day": "Day 2",
+              "warehouse_id": "WH-REG-002",
+              "sku": "Influenza Vaccine",
+              "remedy_suggested": "Initiate proactive transfer of Influenza Vaccine from surplus hubs immediately."
+            },
+            {
+              "day": "Day 3",
+              "warehouse_id": "WH-REG-002",
+              "sku": "Influenza Vaccine",
+              "remedy_suggested": "Initiate proactive transfer of Influenza Vaccine from surplus hubs immediately."
+            },
+            {
+              "day": "Day 4",
+              "warehouse_id": "WH-REG-002",
+              "sku": "Influenza Vaccine",
+              "remedy_suggested": "Initiate proactive transfer of Influenza Vaccine from surplus hubs immediately."
+            },
+            {
+              "day": "Day 5",
+              "warehouse_id": "WH-REG-002",
+              "sku": "Influenza Vaccine",
+              "remedy_suggested": "Initiate proactive transfer of Influenza Vaccine from surplus hubs immediately."
+            }
+          ],
+          "simulated_at": "2026-05-23 20:04:14.557190"
+        }
+      }
+    },
+    "Network Survivability": {
+      "status_code": 200,
+      "data": {
+        "data": {
+          "regional_survivability": {
+            "NORTH": 100,
+            "SOUTH": 100,
+            "EAST": 100,
+            "WEST": 100
+          },
+          "network_vulnerability_index": 100.0,
+          "propagation_risks": [],
+          "cascading_failure_prediction": []
+        },
+        "meta": {
+          "correlation_id": "2401be81-587b-49ac-bb92-7e69a66d5d15",
+          "status": "COMPLETED"
+        }
+      }
+    },
+    "Stress Testing Simulator": {
+      "status_code": 200,
+      "data": {
+        "data": {
+          "stress_scenario": "COLD_CHAIN_FAILURE",
+          "description": "Regional power failure compromises sub-zero storage compartments in South Depot.",
+          "network_survivability_duration_days": 22.0,
+          "medicine_collapse_points": [],
+          "regional_resilience_index": {
+            "NORTH": {
+              "survival_days": 10.0,
+              "risk_status": "VULNERABLE"
+            },
+            "SOUTH": {
+              "survival_days": 10.0,
+              "risk_status": "VULNERABLE"
+            },
+            "EAST": {
+              "survival_days": 10.0,
+              "risk_status": "VULNERABLE"
+            },
+            "WEST": {
+              "survival_days": 10.0,
+              "risk_status": "VULNERABLE"
+            }
+          },
+          "recovery_timeline_weeks": 1.8,
+          "recommended_buffer_multiplier": 1.2
+        }
+      }
+    },
+    "Long Horizon Preparedness": {
+      "status_code": 405,
+      "data": {
+        "detail": "Method Not Allowed"
+      }
+    },
+    "Probabilistic Forecast": {
+      "status_code": 500,
+      "data": {
+        "detail": "name 'timedelta' is not defined"
+      }
+    },
+    "Governance Analytics": {
+      "status_code": 200,
+      "data": {
+        "data": {
+          "total_decisions_logged": 42,
+          "approval_rate_pct": 78.4,
+          "override_rate_pct": 12.5,
+          "strategic_trust_compliance_index": 94.2
+        }
+      }
+    },
+    "SaaS SOC2 Vault": {
+      "status_code": 200,
+      "data": {
+        "soc2_evidence_records": [],
+        "count": 0
+      }
+    },
+    "SaaS HIPAA Vault": {
+      "status_code": 200,
+      "data": {
+        "hipaa_evidence_records": [],
+        "count": 0
+      }
+    },
+    "SaaS Economics Metrics": {
+      "status_code": 200,
+      "data": {
+        "active_tenant_count": 1052,
+        "suspended_tenant_count": 0,
+        "mrr_usd": 1021800.0,
+        "projected_arr_usd": 12261600.0,
+        "avg_infra_cost_per_tenant_usd": 0.4278,
+        "average_tenant_profitability_pct": 84.5,
+        "monthly_storage_growth_gb": 1578.0,
+        "monthly_projected_egress_fees_usd": 84.16,
+        "finops_budget_alert_threshold": 10000.0,
+        "finops_status": "OPTIMIZED"
+      }
+    },
+    "SaaS SLA Violations": {
+      "status_code": 200,
+      "data": {
+        "active_sla_violations": [],
+        "count": 0
+      }
+    },
+    "SaaS Compliance Attestations": {
+      "status_code": 200,
+      "data": {
+        "attestation_records": [],
+        "count": 0
+      }
+    },
+    "SaaS Soak Diagnostics": {
+      "status_code": 200,
+      "data": {
+        "simulated_soak_days": 7.0,
+        "memory_fragmentation_ratio": 1.072,
+        "kafka_retention_days": 7,
+        "redis_eviction_policy": "volatile-lru",
+        "database_vacuum_growth_pct": 2.4,
+        "queue_backlog_saturation_pct": 13.3,
+        "ai_inference_degradation_pct": 0.2,
+        "disk_pressure_status": "NORMAL"
+      }
+    },
+    "Prometheus Metrics Scraper": {
+      "status_code": 200,
+      "data": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 3016.0\npython_gc_objects_collect"
+    }
+  }
+}

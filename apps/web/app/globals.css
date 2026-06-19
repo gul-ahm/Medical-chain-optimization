@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 32.1% 91.4%;
+  --input: 214.3 32.1% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.5rem;
+
+  /* Domain Specific Tokens */
+  --ai: 243 75% 59%;
+  --status-positive: 161 94% 30%;
+  --status-warning: 38 92% 50%;
+  --status-critical: 347 77% 50%;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 217.2 91.2% 59.8%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 224.3 76.3% 48%;
+}
+
+/* Design tokens */
+:root {
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.15);
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+/* Typography defaults */
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    font-size: 100%; /* 16px */
+    color: hsl(var(--foreground));
+    background-color: hsl(var(--background));
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-y: overlay;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    margin: 0 0 1rem 0;
+  }
+  a {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+    transition: color 0.2s ease-in-out;
+  }
+  a:hover {
+    color: hsl(var(--primary-foreground));
+  }
+  button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: var(--radius-md);
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--primary));
+  border-radius: var(--radius-sm);
+  border: 2px solid hsl(var(--muted));
+}
+
+/* Accessibility focus */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Responsive defaults */
+@media (max-width: 640px) {
+  html {
+    font-size: 93.75%; /* 15px */
+  }
+}
+@media (min-width: 1280px) {
+  html {
+    font-size: 106.25%; /* 17px */
+  }
+}
+
+/* shadcn/ui compatibility */
+[data-radix-popover-content] {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+[data-radix-dialog-content] {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  background-color: hsl(var(--background));
+}
+
+/* Sonner (toast) compatibility */
+.sonner-toast {
+  border-radius: var(--radius-sm);
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  box-shadow: var(--shadow-sm);
+}
+
+/* React Flow compatibility */
+.react-flow__node {
+  border-radius: var(--radius-md);
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  box-shadow: var(--shadow-sm);
+}
+.react-flow__edge-path {
+  stroke: hsl(var(--primary));
+  stroke-width: 2;
+}
+
+/* ECharts compatibility */
+.echarts {
+  font-family: var(--font-sans) !important;
+}
+.echarts .title {
+  color: hsl(var(--foreground)) !important;
+}
+.echarts .axis-label {
+  color: hsl(var(--muted-foreground)) !important;
+}
+.echarts .tooltip {
+  background: hsl(var(--muted)) !important;
+  border-radius: var(--radius-sm) !important;
+  color: hsl(var(--foreground)) !important;
+}

@@ -1,0 +1,11 @@
+pyproject.toml
+sc_events/__init__.py
+sc_events/consumer.py
+sc_events/envelope.py
+sc_events/producer.py
+sc_events/registry.py
+sc_events.egg-info/PKG-INFO
+sc_events.egg-info/SOURCES.txt
+sc_events.egg-info/dependency_links.txt
+sc_events.egg-info/requires.txt
+sc_events.egg-info/top_level.txt

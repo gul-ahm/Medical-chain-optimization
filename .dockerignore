@@ -1,0 +1,16 @@
+**/node_modules
+**/.next
+**/dist
+**/build
+.git
+**/__pycache__
+*.pyc
+.env
+.venv
+venv
+infrastructure/data
+NorthwindData.zip
+audit_report
+packages/*/node_modules
+apps/*/node_modules
+services/*/node_modules

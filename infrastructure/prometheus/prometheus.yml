@@ -1,0 +1,23 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'inventory-service'
+    static_configs:
+      - targets: ['inventory-service:8001']
+
+  - job_name: 'forecasting-service'
+    static_configs:
+      - targets: ['forecasting-service:8002']
+
+  - job_name: 'optimization-service'
+    static_configs:
+      - targets: ['optimization-service:8003']
+
+  - job_name: 'orchestration-service'
+    static_configs:
+      - targets: ['orchestration-service:8004']
+
+  - job_name: 'governance-service'
+    static_configs:
+      - targets: ['governance-service:8005']

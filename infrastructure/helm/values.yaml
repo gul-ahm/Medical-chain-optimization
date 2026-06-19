@@ -1,0 +1,36 @@
+# Default values for supply-chain-platform.
+global:
+  namespace: sc-enterprise
+  image:
+    tag: latest
+    pullPolicy: Always
+
+services:
+  inventory:
+    enabled: true
+    replicaCount: 3
+    port: 8001
+  forecasting:
+    enabled: true
+    replicaCount: 2
+    port: 8002
+  optimization:
+    enabled: true
+    replicaCount: 2
+    port: 8003
+  orchestration:
+    enabled: true
+    replicaCount: 3
+    port: 8004
+  governance:
+    enabled: true
+    replicaCount: 2
+    port: 8005
+
+infrastructure:
+  kafka:
+    enabled: true
+  redis:
+    enabled: true
+  postgres:
+    enabled: true

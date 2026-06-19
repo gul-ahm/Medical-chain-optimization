@@ -1,0 +1,12 @@
+{
+  "medical_context": {
+    "product": "Medicines, clinical supplies, pharmaceuticals",
+    "stock": "Clinical inventory, pharmacy stock levels",
+    "order": "Supply procurement, hospital requisition",
+    "supplier": "Pharmaceutical distributor, clinical vendor"
+  },
+  "definitions": {
+    "reorder_point": "The inventory level at which a new clinical supply requisition must be initiated.",
+    "lead_time": "The duration between supply requisition and pharmacy delivery."
+  }
+}

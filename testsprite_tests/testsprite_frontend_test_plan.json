@@ -1,0 +1,786 @@
+[
+  {
+    "id": "TC001",
+    "title": "Open the main command center",
+    "description": "This verifies that a user can open the main dashboard and see the central executive workspace with key operational visibility.",
+    "category": "Cross-Module Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the main command center is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify key operational metrics or incidents are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Open the executive command center and review operational status",
+    "description": "This verifies that the executive dashboard loads with KPI visibility and active incidents for leadership monitoring.",
+    "category": "Executive Command Center",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify executive KPI information is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify active incidents are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Move between dashboard modules without losing context",
+    "description": "This verifies that switching between the executive, inventory, and simulation modules preserves the user\u00e2\u20ac\u2122s working state and selected context.",
+    "category": "Executive Command Center",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/executive"
+      },
+      {
+        "type": "action",
+        "description": "Enter text into the executive chat input"
+      },
+      {
+        "type": "action",
+        "description": "Switch to the inventory module"
+      },
+      {
+        "type": "action",
+        "description": "Switch to the simulation lab module"
+      },
+      {
+        "type": "action",
+        "description": "Return to the executive module"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the previously entered executive chat context is preserved"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the module workspace context is preserved"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Move from the command center to the executive copilot",
+    "description": "This verifies that a user can switch from the main dashboard to the executive copilot module while staying in the same workspace context.",
+    "category": "Cross-Module Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the executive module"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the executive copilot workspace is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the application remains in the same workspace context"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Move from the command center to inventory analysis",
+    "description": "This verifies that a user can switch from the main dashboard to inventory analysis without losing the shared workspace context.",
+    "category": "Cross-Module Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the inventory module"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the inventory workspace is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the application remains in the same workspace context"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Move from the command center to the simulation lab",
+    "description": "This verifies that a user can switch from the main dashboard to the simulation workspace without leaving the shared command center experience.",
+    "category": "Cross-Module Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the simulation lab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the simulation workspace is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the application remains in the same workspace context"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Open the simulation lab and run a scenario",
+    "description": "This verifies that a user can configure a simulation scenario and run a digital twin analysis from the simulation lab.",
+    "category": "Simulation & What-If",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/simulation-lab"
+      },
+      {
+        "type": "action",
+        "description": "Configure the simulation constraints"
+      },
+      {
+        "type": "action",
+        "description": "Run the scenario"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify scenario results are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the projected impact is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Review a pending AI recommendation from the executive command center",
+    "description": "This verifies that a pending recommendation can be opened from the executive dashboard and its review details are visible.",
+    "category": "Executive Command Center",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/executive"
+      },
+      {
+        "type": "action",
+        "description": "View the pending AI recommendations area"
+      },
+      {
+        "type": "action",
+        "description": "Open a pending AI recommendation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the recommendation review details are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the reasoning summary is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Ask a supply chain question in the executive copilot",
+    "description": "This verifies that a user can submit a supply chain question and receive an AI-generated summary response in the executive workspace.",
+    "category": "Executive Copilot Chat",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/executive"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the chat input with a supply chain question"
+      },
+      {
+        "type": "action",
+        "description": "Submit the question"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an AI summary response is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the conversation remains in the executive workspace"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Ask a supply chain question and continue the conversation",
+    "description": "This verifies that a user can submit an executive copilot question and then ask a follow-up while staying in the same conversation workspace.",
+    "category": "Cross-Module Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/executive"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the chat input with a supply chain question"
+      },
+      {
+        "type": "action",
+        "description": "Submit the chat message"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a response summary is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the chat input with a follow-up question"
+      },
+      {
+        "type": "action",
+        "description": "Submit the chat message"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a follow-up response is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "View live inventory status and warehouse utilization",
+    "description": "This verifies that the inventory module loads live stock positioning and warehouse utilization for operational monitoring.",
+    "category": "Inventory Intelligence",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/inventory"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify live inventory levels are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify warehouse utilization is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "Initiate shortage forensics and review the analysis",
+    "description": "This verifies that a user can start a shortage investigation from inventory and see the resulting root cause analysis with mitigation guidance.",
+    "category": "Shortage Forensics",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/inventory"
+      },
+      {
+        "type": "action",
+        "description": "Click the forensic investigation action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the root cause analysis is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify risk level and mitigation guidance are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC013",
+    "title": "Approve a reviewed AI recommendation",
+    "description": "This verifies that an executive can review a recommendation and complete the approve action successfully.",
+    "category": "Executive Command Center",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/executive"
+      },
+      {
+        "type": "action",
+        "description": "Open a pending AI recommendation"
+      },
+      {
+        "type": "action",
+        "description": "Review the reasoning summary"
+      },
+      {
+        "type": "action",
+        "description": "Approve the recommendation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the recommendation is no longer pending"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an approval confirmation is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC014",
+    "title": "Run a simulation and review the scenario results",
+    "description": "This verifies that a user can configure a scenario, run the simulation, and see the resulting impact summary in the simulation lab.",
+    "category": "Simulation & What-If",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/simulation-lab"
+      },
+      {
+        "type": "action",
+        "description": "Configure valid scenario constraints"
+      },
+      {
+        "type": "action",
+        "description": "Run the simulation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify scenario results are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify projected impact data is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC015",
+    "title": "Initiate shortage forensics from the inventory module",
+    "description": "This verifies that a shortage investigation can be started and the resulting root cause, risk, and mitigation guidance are visible.",
+    "category": "Inventory Intelligence",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/inventory"
+      },
+      {
+        "type": "action",
+        "description": "Initiate a shortage investigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the root cause analysis is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the risk level and mitigation guidance are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC016",
+    "title": "Reject a reviewed AI recommendation",
+    "description": "This verifies that an executive can review a recommendation and complete the reject action successfully.",
+    "category": "Executive Command Center",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/executive"
+      },
+      {
+        "type": "action",
+        "description": "Open a pending AI recommendation"
+      },
+      {
+        "type": "action",
+        "description": "Review the reasoning summary"
+      },
+      {
+        "type": "action",
+        "description": "Reject the recommendation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the recommendation is no longer pending"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a rejection confirmation is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC017",
+    "title": "Review a pending AI recommendation in the executive module",
+    "description": "This verifies that a user can inspect a pending recommendation, review the reasoning, and complete an approval or rejection action.",
+    "category": "Cross-Module Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/executive"
+      },
+      {
+        "type": "action",
+        "description": "Open the pending AI recommendation details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify SHAP reasoning or explanation details are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Approve or reject the recommendation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a decision confirmation is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC018",
+    "title": "Inspect a stock item and review its latest mutation history",
+    "description": "This verifies that a user can open a specific stock item and see its detailed movement context and latest mutation history.",
+    "category": "Inventory Intelligence",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/inventory"
+      },
+      {
+        "type": "action",
+        "description": "Select a stock item from the inventory view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify detailed inventory state is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the latest mutation history is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC019",
+    "title": "Continue an executive copilot conversation with a follow-up question",
+    "description": "This verifies that a follow-up question can be submitted and the response updates within the same executive chat context.",
+    "category": "Executive Copilot Chat",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/executive"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the chat input with an initial supply chain question"
+      },
+      {
+        "type": "action",
+        "description": "Submit the question"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the chat input with a follow-up supply chain question"
+      },
+      {
+        "type": "action",
+        "description": "Submit the follow-up question"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the updated AI response is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the prior conversation context is preserved"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC020",
+    "title": "Review a shortage investigation with causality and action plan",
+    "description": "This verifies that a user can run a shortage investigation for a different inventory issue and review the resulting causality chain with recommended actions.",
+    "category": "Shortage Forensics",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/inventory"
+      },
+      {
+        "type": "action",
+        "description": "Click the forensic investigation action"
+      },
+      {
+        "type": "action",
+        "description": "Open the detailed investigation results"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the causality chain is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a recommended action plan is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC021",
+    "title": "Compare a new simulation run against a prior result",
+    "description": "This verifies that a user can review results side by side with a previous run or baseline in the simulation lab.",
+    "category": "Simulation & What-If",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/simulation-lab"
+      },
+      {
+        "type": "action",
+        "description": "Run an initial scenario"
+      },
+      {
+        "type": "action",
+        "description": "Adjust the simulation constraints"
+      },
+      {
+        "type": "action",
+        "description": "Run the scenario again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the comparison view is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify both runs are available for comparison"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC022",
+    "title": "Compare a new simulation with prior results",
+    "description": "This verifies that a user can run a second scenario and compare the output against a previous run or baseline condition.",
+    "category": "Simulation & What-If",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/simulation-lab"
+      },
+      {
+        "type": "action",
+        "description": "Configure valid scenario constraints"
+      },
+      {
+        "type": "action",
+        "description": "Run the simulation"
+      },
+      {
+        "type": "action",
+        "description": "Adjust the scenario constraints"
+      },
+      {
+        "type": "action",
+        "description": "Run the simulation again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the comparison view is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify changes from the prior run are displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC023",
+    "title": "Observe changed projected impact after adjusting simulation parameters",
+    "description": "This verifies that modifying scenario parameters and rerunning produces a changed projected outcome in the simulation lab.",
+    "category": "Simulation & What-If",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/simulation-lab"
+      },
+      {
+        "type": "action",
+        "description": "Run a scenario with one set of constraints"
+      },
+      {
+        "type": "action",
+        "description": "Adjust a scenario parameter"
+      },
+      {
+        "type": "action",
+        "description": "Run the scenario again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the projected impact changes after the adjustment"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC024",
+    "title": "See changed projected impact after adjusting a scenario",
+    "description": "This verifies that a user can modify simulation parameters and observe that the projected impact updates after rerunning the scenario.",
+    "category": "Simulation & What-If",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/simulation-lab"
+      },
+      {
+        "type": "action",
+        "description": "Configure valid scenario constraints"
+      },
+      {
+        "type": "action",
+        "description": "Run the simulation"
+      },
+      {
+        "type": "action",
+        "description": "Adjust the simulation parameters"
+      },
+      {
+        "type": "action",
+        "description": "Run the simulation again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify updated projected impact data is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC025",
+    "title": "View inventory and simulation modules from the shared workspace",
+    "description": "This verifies that a user can move between inventory and simulation modules from the shared dashboard shell without losing the overall workspace context.",
+    "category": "Cross-Module Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/inventory"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the simulation lab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the simulation workspace is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation link for the inventory module"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the inventory workspace is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the application remains in the same workspace context"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC026",
+    "title": "Handle an empty inventory mutation history",
+    "description": "This verifies that the inventory module shows an empty state when no recent mutations are available.",
+    "category": "Inventory Intelligence",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/inventory"
+      },
+      {
+        "type": "action",
+        "description": "Select a stock item with no recent mutations"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an empty mutation history state is displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC027",
+    "title": "View governance dashboard",
+    "description": "Verifies the governance module loads successfully.",
+    "category": "Governance",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/governance"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify governance dashboard is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC028",
+    "title": "View forecasting module",
+    "description": "Verifies the forecasting module loads.",
+    "category": "Forecasting",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard/forecasting"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify forecasting dashboard is displayed"
+      }
+    ],
+    "priority": "Medium"
+  }
+]

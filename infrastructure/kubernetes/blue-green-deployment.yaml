@@ -1,0 +1,108 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sc-intel-api-blue
+  namespace: sc-platform
+  labels:
+    app: sc-intel-api
+    version: blue
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sc-intel-api
+      version: blue
+  template:
+    metadata:
+      labels:
+        app: sc-intel-api
+        version: blue
+    spec:
+      containers:
+      - name: api
+        image: sc-intelligence-api:v1.0.0
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "1Gi"
+          limits:
+            cpu: "1000m"
+            memory: "2Gi"
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 8000
+          initialDelaySeconds: 15
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sc-intel-api-green
+  namespace: sc-platform
+  labels:
+    app: sc-intel-api
+    version: green
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sc-intel-api
+      version: green
+  template:
+    metadata:
+      labels:
+        app: sc-intel-api
+        version: green
+    spec:
+      containers:
+      - name: api
+        image: sc-intelligence-api:v1.1.0
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "1Gi"
+          limits:
+            cpu: "1000m"
+            memory: "2Gi"
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 8000
+          initialDelaySeconds: 15
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sc-intel-api-active
+  namespace: sc-platform
+spec:
+  selector:
+    app: sc-intel-api
+    version: blue # SWITCH TO 'green' TO DEPLOY NEW VERSION
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000
+  type: ClusterIP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sc-intel-api-preview
+  namespace: sc-platform
+spec:
+  selector:
+    app: sc-intel-api
+    version: green # PREVIEW NEW VERSION BEFORE SWITCHING ACTIVE
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000
+  type: ClusterIP

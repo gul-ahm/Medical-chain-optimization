@@ -1,0 +1,112 @@
+{
+  "datasets": {
+    "products": {
+      "name": "Products",
+      "path": "E:/power bi/NorthwindData/Products.json",
+      "purpose": "Medicine inventory and stock level tracking",
+      "target": "PostgreSQL (medicines, inventory_stock), Redis (inventory_risk)",
+      "services": ["inventory-service", "data-ingestion-service"],
+      "apis": ["/api/v1/inventory"],
+      "pages": ["Inventory Dashboard"],
+      "refresh_strategy": "Daily",
+      "schema_mapping_source": "sc_schemas.mapping.products",
+      "medical_transformation_rules": "ProductName -> MedicineName, UnitsInStock -> CurrentStock, ReorderLevel -> SafetyStock"
+    },
+    "orders": {
+      "name": "Orders",
+      "path": "E:/power bi/NorthwindData/Orders.json",
+      "purpose": "Historical demand and medicine movement tracking",
+      "target": "PostgreSQL (medicine_orders, demand_history), Redis (rolling_demand)",
+      "services": ["forecasting-service", "data-ingestion-service"],
+      "apis": ["/api/v1/forecasting"],
+      "pages": ["Forecasting Dashboard"],
+      "refresh_strategy": "Real-time Event Stream",
+      "schema_mapping_source": "sc_schemas.mapping.orders",
+      "medical_transformation_rules": "OrderID -> RxOrderID, CustomerID -> HospitalID"
+    },
+    "order_details": {
+      "name": "Order_Details",
+      "path": "E:/power bi/NorthwindData/Order_Details.json",
+      "purpose": "Detailed demand analysis and trend detection",
+      "target": "PostgreSQL (demand_history)",
+      "services": ["forecasting-service"],
+      "apis": ["/api/v1/forecasting/trends"],
+      "pages": ["Forecasting Dashboard"],
+      "refresh_strategy": "Daily Batch",
+      "schema_mapping_source": "sc_schemas.mapping.order_details",
+      "medical_transformation_rules": "Quantity -> DosageUnits"
+    },
+    "invoices": {
+      "name": "Invoices",
+      "path": "E:/power bi/NorthwindData/Invoices.json",
+      "purpose": "Financial demand signal and regional demand spikes",
+      "target": "PostgreSQL (demand_history)",
+      "services": ["forecasting-service"],
+      "apis": ["/api/v1/forecasting/revenue"],
+      "pages": ["Regional Dashboard"],
+      "refresh_strategy": "Weekly Batch",
+      "schema_mapping_source": "sc_schemas.mapping.invoices",
+      "medical_transformation_rules": "ShipRegion -> HospitalRegion"
+    },
+    "suppliers": {
+      "name": "Suppliers",
+      "path": "E:/power bi/NorthwindData/Suppliers.json",
+      "purpose": "Pharma vendor intelligence and dependency analysis",
+      "target": "PostgreSQL (pharma_vendors), Redis (supplier_latency)",
+      "services": ["optimization-service", "inventory-service"],
+      "apis": ["/api/v1/suppliers"],
+      "pages": ["Supplier Dashboard"],
+      "refresh_strategy": "Monthly",
+      "schema_mapping_source": "sc_schemas.mapping.suppliers",
+      "medical_transformation_rules": "CompanyName -> VendorName, ContactName -> ProcurementLead"
+    },
+    "regions": {
+      "name": "Regions",
+      "path": "E:/power bi/NorthwindData/Regions.json",
+      "purpose": "Warehouse geography definition",
+      "target": "PostgreSQL (warehouses)",
+      "services": ["optimization-service"],
+      "apis": ["/api/v1/distribution"],
+      "pages": ["Regional Dashboard"],
+      "refresh_strategy": "Static",
+      "schema_mapping_source": "sc_schemas.mapping.regions",
+      "medical_transformation_rules": "RegionDescription -> HubRegion"
+    },
+    "territories": {
+      "name": "Territories",
+      "path": "E:/power bi/NorthwindData/Territories.json",
+      "purpose": "Hospital distribution mapping",
+      "target": "PostgreSQL (territories)",
+      "services": ["optimization-service"],
+      "apis": ["/api/v1/distribution/territories"],
+      "pages": ["Regional Dashboard"],
+      "refresh_strategy": "Static",
+      "schema_mapping_source": "sc_schemas.mapping.territories",
+      "medical_transformation_rules": "TerritoryDescription -> ClinicalZone"
+    },
+    "customers": {
+      "name": "Customers",
+      "path": "E:/power bi/NorthwindData/Customers.json",
+      "purpose": "Hospital and pharmacy distribution network",
+      "target": "PostgreSQL (hospitals)",
+      "services": ["orchestration-service"],
+      "apis": ["/api/v1/hospitals"],
+      "pages": ["Regional Dashboard"],
+      "refresh_strategy": "Monthly",
+      "schema_mapping_source": "sc_schemas.mapping.customers",
+      "medical_transformation_rules": "CompanyName -> HospitalName, City -> HospitalCity"
+    },
+    "shippers": {
+      "name": "Shippers",
+      "path": "E:/power bi/NorthwindData/Shippers.json",
+      "purpose": "Logistics providers and shipment route analysis",
+      "target": "PostgreSQL (medicine_shipments)",
+      "services": ["optimization-service"],
+      "apis": ["/api/v1/logistics"],
+      "pages": ["Logistics Dashboard"],
+      "refresh_strategy": "Quarterly",
+      "schema_mapping_source": "sc_schemas.mapping.shippers",
+      "medical_transformation_rules": "CompanyName -> CarrierName"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+# ==============================================================================
+# MEDICAL SUPPLY PLATFORM - ISTIO SERVICE MESH & ZERO-TRUST POLICY DEFS
+# ==============================================================================
+
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+metadata:
+  name: default-strict-mtls
+  namespace: production
+spec:
+  mtls:
+    mode: STRICT # Strict mutual TLS (mTLS) enforced across all East-West mesh pods
+
+---
+
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: deny-all-by-default
+  namespace: production
+spec:
+  action: DENY
+  rules:
+  - {} # Explicitly lock down the mesh namespace: deny all inter-service routes by default
+
+---
+
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-ingress-to-gateway
+  namespace: production
+spec:
+  selector:
+    matchLabels:
+      app: api-gateway
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        namespaces: ["istio-system"]
+    to:
+    - operation:
+        methods: ["GET", "POST", "PUT"]
+        paths: ["/api/*"]
+
+---
+
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-gateway-to-ai-service
+  namespace: production
+spec:
+  selector:
+    matchLabels:
+      app: ai-orchestration-service
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        principals: ["cluster.local/ns/production/sa/api-gateway-sa"]
+    to:
+    - operation:
+        methods: ["GET", "POST"]
+        paths: [
+          "/api/v1/ai/security/*",
+          "/api/v1/ai/observability/*",
+          "/api/v1/ai/cluster/*",
+          "/api/v1/ai/interop/*"
+        ]
+
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: ai-orchestration-vs
+  namespace: production
+spec:
+  hosts:
+  - "ai-orchestration.medical.supply.network"
+  gateways:
+  - clinical-mesh-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /api/v1/ai
+    route:
+    - destination:
+        host: ai-orchestration-service.production.svc.cluster.local
+        port:
+          number: 8000

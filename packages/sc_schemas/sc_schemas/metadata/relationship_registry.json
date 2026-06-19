@@ -1,0 +1,61 @@
+{
+  "joins": [
+    {
+      "tables": [
+        "Products",
+        "Order_Details"
+      ],
+      "key": "ProductID"
+    },
+    {
+      "tables": [
+        "Products",
+        "Categories"
+      ],
+      "key": "CategoryID"
+    },
+    {
+      "tables": [
+        "Products",
+        "Suppliers"
+      ],
+      "key": "SupplierID"
+    },
+    {
+      "tables": [
+        "Orders",
+        "Order_Details"
+      ],
+      "key": "OrderID"
+    },
+    {
+      "tables": [
+        "Orders",
+        "Customers"
+      ],
+      "key": "CustomerID"
+    },
+    {
+      "tables": [
+        "Orders",
+        "Employees"
+      ],
+      "key": "EmployeeID"
+    },
+    {
+      "tables": [
+        "Invoices",
+        "Orders"
+      ],
+      "key": "OrderID"
+    }
+  ],
+  "primary_keys": {
+    "Products.json": "ProductID",
+    "Orders.json": "OrderID",
+    "Customers.json": "CustomerID",
+    "Employees.json": "EmployeeID",
+    "Categories.json": "CategoryID",
+    "Suppliers.json": "SupplierID"
+  }
+}

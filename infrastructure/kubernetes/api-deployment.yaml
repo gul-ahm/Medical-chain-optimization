@@ -1,0 +1,92 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sc-api-config
+  namespace: sc-platform
+data:
+  ENVIRONMENT: "production"
+  LOG_LEVEL: "info"
+  REDIS_URL: "redis://sc-intel-redis:6379/0"
+  KAFKA_BOOTSTRAP_SERVERS: "sc-intel-kafka:9092"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sc-intelligence-api
+  namespace: sc-platform
+  labels:
+    app: sc-intelligence-api
+    tier: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sc-intelligence-api
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: sc-intelligence-api
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
+    spec:
+      containers:
+      - name: api
+        image: sc-intelligence-api:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "1Gi"
+          limits:
+            cpu: "1000m"
+            memory: "2Gi"
+        envFrom:
+        - configMapRef:
+            name: sc-api-config
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: sc-api-secrets
+              key: database_url
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: sc-api-secrets
+              key: secret_key
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /health/live
+            port: 8000
+          initialDelaySeconds: 20
+          periodSeconds: 20
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sc-intelligence-api
+  namespace: sc-platform
+spec:
+  selector:
+    app: sc-intelligence-api
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000
+  type: ClusterIP
